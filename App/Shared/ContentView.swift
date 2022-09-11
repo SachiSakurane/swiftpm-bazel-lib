@@ -6,11 +6,10 @@
 //
 
 import SwiftUI
-import swiftpm_bazel_lib
 
 struct ContentView: View {
     var body: some View {
-        Text(swiftpm_bazel_lib().text)
+        Text("Hello, World!")
             .padding()
     }
 }
