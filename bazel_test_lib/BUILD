@@ -4,9 +4,10 @@ package(
     default_visibility = ["//visibility:public"],
 )
 
-objc_library(
+cc_library(
     name = "cpp_core_lib",
-    srcs = ["//src:helloworld.cpp", "//src:helloworld.h"],
+    srcs = ["//src:helloworld.cpp"],
+    hdrs = ["//src:helloworld.h"],
     alwayslink = 1,
 )
 
