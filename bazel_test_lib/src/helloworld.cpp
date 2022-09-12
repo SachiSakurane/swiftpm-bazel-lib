@@ -1,19 +1,26 @@
 #include "helloworld.h"
 
 #include <iostream>
+#include <string>
 
-void SayMachine::say() const {
-  std::cout << name << std::endl;
-}
+struct SayMachine {
+public:
+  void say() const {
+    std::cout << name << std::endl;
+  }
 
-SayMachine* make_machine(const char* name) {
+private:
+  const std::string name;
+};
+
+SayMachineRef make_machine(const char* name) {
   return new SayMachine;
 }
 
-void say(const SayMachine* machine) {
+void say_machine(const SayMachineRef machine) {
   machine->say();
 }
 
-void destory_machine(SayMachine* machine) {
+void destory_machine(SayMachineRef machine) {
   delete machine;
 }
