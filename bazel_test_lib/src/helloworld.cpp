@@ -5,6 +5,8 @@
 
 struct SayMachine {
 public:
+  SayMachine(const char* _name) : name(_name) {}
+
   void say() const {
     std::cout << name << std::endl;
   }
@@ -14,7 +16,7 @@ private:
 };
 
 SayMachineRef make_machine(const char* name) {
-  return new SayMachine;
+  return new SayMachine{name};
 }
 
 void say_machine(const SayMachineRef machine) {
