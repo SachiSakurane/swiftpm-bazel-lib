@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+import CppCoreLib
 
 struct ContentView: View {
     var body: some View {
         Text("Hello, World!")
             .padding()
+        Button("say") {
+            let machine = make_machine("yo waiwai")
+            say_machine(machine)
+            destory_machine(machine)
+        }
     }
 }
 
