@@ -1,0 +1,3 @@
+[submodule "bazel_test_lib"]
+	path = bazel_test_lib
+	url = git@github.com:SachiSakurane/bazel_test_lib.git

@@ -1,8 +1,0 @@
-.DS_Store
-xcshareddata/
-xcuserdata/
-xcworkspace/
-.netrc
-/*.xcframework
-/.swiftpm
-bazel-*
